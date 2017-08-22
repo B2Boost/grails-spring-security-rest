@@ -30,9 +30,12 @@ dependencies {
         exclude module: "bcprov-jdk14"
     }
     compile 'commons-codec:commons-codec:1.10'
-    compile "org.grails.plugins:spring-security-core:3.1.2"
+    compile "org.grails.plugins:spring-security-core:3.2.0.M1"
+//    compile "org.grails.plugins:spring-security-core:3.1.2"
 
     testCompile "org.gperfutils:gbench:0.4.3-groovy-2.4"
+    testCompile "org.grails:grails-web-testing-support"
+    testCompile "cglib:cglib-nodep:3.2.5"
 
     profile "org.grails.profiles:web-plugin:${grailsVersion}"
 }

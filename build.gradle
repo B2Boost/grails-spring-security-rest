@@ -29,7 +29,7 @@ def publishedProjects = pluginProjects + profileProjects
 
 subprojects { Project project ->
     group "org.grails.plugins"
-    version "2.0.0.BUILD-SNAPSHOT"
+    version "3.0.0.BUILD-SNAPSHOT"
 
     ext {
         grailsVersion = project.grailsVersion
@@ -63,6 +63,7 @@ subprojects { Project project ->
             provided "org.grails:grails-plugin-services"
 
             testCompile "org.grails:grails-plugin-testing"
+            testCompile "org.grails:grails-testing-support"
             testCompile('com.athaydes:spock-reports:1.2.13') {
                 transitive = false
             }

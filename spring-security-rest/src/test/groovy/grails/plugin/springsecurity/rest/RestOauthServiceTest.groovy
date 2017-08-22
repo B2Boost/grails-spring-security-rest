@@ -16,7 +16,7 @@
  */
 package grails.plugin.springsecurity.rest
 
-import grails.test.mixin.TestFor
+import grails.testing.services.ServiceUnitTest
 import grails.web.mapping.LinkGenerator
 import org.pac4j.oauth.client.*
 import spock.lang.Specification
@@ -25,8 +25,7 @@ import spock.lang.Unroll
 /**
  * Created by Svante on 2014-10-15.
  */
-@TestFor(RestOauthService)
-class RestOauthServiceTest extends Specification {
+class RestOauthServiceTest extends Specification implements ServiceUnitTest<RestOauthService> {
 
     def setup() {
         def grailsLinkGenerator = Mock(LinkGenerator)

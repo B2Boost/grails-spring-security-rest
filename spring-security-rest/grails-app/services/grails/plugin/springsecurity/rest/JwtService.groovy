@@ -36,6 +36,7 @@ import java.util.zip.GZIPOutputStream
 /**
  * Helper to perform actions with JWT tokens
  */
+@Slf4j
 class JwtService {
 
     String jwtSecret

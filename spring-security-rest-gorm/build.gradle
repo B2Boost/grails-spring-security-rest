@@ -8,4 +8,6 @@ dependencyManagement {
 dependencies {
     compile project(":spring-security-rest")
     profile "org.grails.profiles:plugin:${grailsVersion}"
+    testCompile "org.grails:grails-gorm-testing-support"
+    testCompile project(":spring-security-rest")
 }

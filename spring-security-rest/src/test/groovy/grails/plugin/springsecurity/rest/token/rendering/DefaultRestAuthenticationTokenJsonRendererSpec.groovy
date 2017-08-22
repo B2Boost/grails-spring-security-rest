@@ -22,8 +22,7 @@ import grails.plugin.springsecurity.ReflectionUtils
 import grails.plugin.springsecurity.SpringSecurityUtils
 import grails.plugin.springsecurity.rest.oauth.OauthUser
 import grails.plugin.springsecurity.rest.token.AccessToken
-import grails.test.mixin.TestMixin
-import grails.test.mixin.web.ControllerUnitTestMixin
+import grails.testing.web.GrailsWebUnitTest
 import org.grails.spring.GrailsApplicationContext
 import org.pac4j.core.profile.CommonProfile
 import org.springframework.security.core.authority.SimpleGrantedAuthority
@@ -33,8 +32,7 @@ import spock.lang.Shared
 import spock.lang.Specification
 import spock.lang.Unroll
 
-@TestMixin(ControllerUnitTestMixin)
-class DefaultRestAuthenticationTokenJsonRendererSpec extends Specification {
+class DefaultRestAuthenticationTokenJsonRendererSpec extends Specification implements GrailsWebUnitTest {
 
     @Shared
     DefaultAccessTokenJsonRenderer renderer

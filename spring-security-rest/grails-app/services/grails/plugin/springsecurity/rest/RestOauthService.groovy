@@ -24,6 +24,7 @@ import grails.plugin.springsecurity.rest.token.generation.TokenGenerator
 import grails.plugin.springsecurity.rest.token.storage.TokenStorageService
 import grails.core.GrailsApplication
 import grails.web.mapping.LinkGenerator
+import groovy.util.logging.Slf4j
 import org.pac4j.core.context.WebContext
 import org.pac4j.core.credentials.Credentials
 import org.pac4j.core.profile.CommonProfile
@@ -34,6 +35,7 @@ import org.springframework.security.core.context.SecurityContextHolder
 /**
  * Deals with pac4j library to fetch a user profile from the selected OAuth provider, and stores it on the security context
  */
+@Slf4j
 class RestOauthService {
 
     static transactional = false
